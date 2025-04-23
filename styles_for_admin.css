@@ -1,0 +1,125 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #f0ad4e;
+    text-align: center;
+}
+
+form {
+    background-color: #292941;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3c3c54;
+    color: #ffffff;
+}
+
+form button {
+    background-color: #f0ad4e;
+    color: #1e1e2f;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ec971f;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background-color: #292941;
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #3c3c54;
+}
+
+table th {
+    background-color: #f0ad4e;
+    color: #1e1e2f;
+}
+
+table tr:hover {
+    background-color: #3c3c54;
+}
+
+table button {
+    background-color: #f0ad4e;
+    color: #1e1e2f;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+table button:hover {
+    background-color: #ec971f;
+}
+
+input[type="file"] {
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #f0ad4e;
+    color: #1e1e2f;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #ec971f;
+}
+
+a {
+    color: #f0ad4e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ec971f;
+}

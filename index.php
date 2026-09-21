@@ -41,7 +41,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameQuest</title>
-    <link rel="stylesheet" href="styles_for_index.css">
+    <link rel="stylesheet" href="styles/styles_for_index.css">
 </head>
 <body>
     <header>
@@ -53,7 +53,7 @@ $conn->close();
               <?php if (isset($_SESSION['user_id'])): ?>
                 <p>Welcome, <strong><?= htmlspecialchars($_SESSION['user_first_name']) ?></strong>!</p>
               <?php endif; ?>
-                <form method="GET" action="game_catalogue.php" style="display: flex; align-items: center; gap: 10px;">
+                <form method="GET" action="pages/game_catalogue_page.php" style="display: flex; align-items: center; gap: 10px;">
                     <input
                         type="text"
                         name="search"
@@ -63,15 +63,15 @@ $conn->close();
                     <button type="submit">Search</button>
                 </form>
                 <button type="submit">Search</button>
-                <a href = "cart_page.php"> <img src="images/shopping-cart-349544_640.png"> </a>
+                <a href = "pages/cart_page.php"> <img src="images/shopping-cart-349544_640.png"> </a>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <?php if ($_SESSION['is_admin'] == 1): ?>
-                        <a href="admin.php" class="profile-button">Admin</a>
+                        <a href="admin_page.php" class="profile-button">Admin</a>
                     <?php endif; ?>
-                    <a href="profile.php" class="profile-button">My Profile</a>
-                    <a href="logout.php">Log Out</a>
+                    <a href="profile/profile_page.php" class="profile-button">My Profile</a>
+                    <a href="util/logout.php">Log Out</a>
                 <?php else: ?>
-                    <a href="login_page.php">Log In</a>
+                    <a href="pages/login_page.php">Log In</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -83,21 +83,21 @@ $conn->close();
               <img src="images/prince_of_persia_the_sands_of_time_banner.png" alt="Banner 1">
               <div class="overlay">
                   <h2>Prince of Persia: The Sands of Time</h2>
-                  <a href="game.php?id=8" class="btn">Learn More</a>
+                  <a href="pages/game_page.php?id=8" class="btn">Learn More</a>
               </div>
           </div>
           <div class="banner">
               <img src="images/portal_2_banner.png" alt="Banner 2">
               <div class="overlay">
                   <h2>Portal 2</h2>
-                  <a href="game.php?id=33" class="btn">Learn More</a>
+                  <a href="pages/game_page.php?id=33" class="btn">Learn More</a>
               </div>
           </div>
           <div class="banner">
               <img src="images/vampire_the_masquerade_bloodlines_banner.png" alt="Banner 3">
               <div class="overlay">
                   <h2>Vampire The Masquerade: Bloodlines</h2>
-                  <a href="game.php?id=45" class="btn">Learn More</a>
+                  <a href="pages/game_page.php?id=45" class="btn">Learn More</a>
               </div>
           </div>
       </div>
@@ -107,7 +107,7 @@ $conn->close();
             <div class="category-grid">
                 <?php foreach ($categories as $category): ?>
                     <div class="category">
-                        <a href="game_catalogue.php?category=<?= $category['id'] ?>">
+                        <a href="pages/game_catalogue_page.php?category=<?= $category['id'] ?>">
                             <img src="<?= $category['image_url'] ?>" alt="<?= htmlspecialchars($category['name']) ?>">
                             <h3><?= htmlspecialchars($category['name']) ?></h3>
                         </a>
@@ -121,7 +121,7 @@ $conn->close();
             <div class="platform-grid">
               <?php foreach ($platforms as $platform): ?>
                   <div class="platform">
-                      <a href="game_catalogue.php?platform=<?= $platform['id'] ?>">
+                      <a href="pages/game_catalogue_page.php?platform=<?= $platform['id'] ?>">
                           <img src="<?= $platform['image_url'] ?>" alt="<?= htmlspecialchars($platform['name']) ?>">
                       </a>
                       <h3><?= htmlspecialchars($platform['name']) ?></h3>
@@ -139,7 +139,7 @@ $conn->close();
                   if ($counter >= 12) break;
               ?>
                   <div class="product">
-                      <a href="game.php?id=<?= $game['id'] ?>">
+                      <a href="pages/game_page.php?id=<?= $game['id'] ?>">
                           <img src="<?= $game['image_url'] ?>" alt="<?= htmlspecialchars($game['title']) ?>">
                           <h3><?= htmlspecialchars($game['title']) ?></h3>
                       </a>
